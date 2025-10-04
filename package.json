@@ -1,0 +1,20 @@
+{
+    "version": "0.0.1",
+    "main": "index.js",
+    "name": "react-native-network-monitor",
+    "description": "react-native network monitor",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JABvzla/react-native-network-monitor.git"
+    },
+    "keywords": [
+        "react-native"
+    ],
+    "author": "JABvzla",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JABvzla/react-native-network-monitor/issues"
+    },
+    "homepage": "https://github.com/JABvzla/react-native-network-monitor#readme"
+}
