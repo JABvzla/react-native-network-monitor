@@ -1,12 +1,12 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.4",
     "main": "index.js",
-    "name": "react-native-network-monitor",
-    "description": "react-native network monitor",
+    "name": "react-native-runtime-monitor",
+    "description": "react-native runtime monitor",
     "scripts": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/JABvzla/react-native-network-monitor.git"
+        "url": "git+https://github.com/JABvzla/react-native-runtime-monitor.git"
     },
     "keywords": [
         "react-native"
@@ -14,7 +14,7 @@
     "author": "JABvzla",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/JABvzla/react-native-network-monitor/issues"
+        "url": "https://github.com/JABvzla/react-native-runtime-monitor/issues"
     },
-    "homepage": "https://github.com/JABvzla/react-native-network-monitor#readme"
+    "homepage": "https://github.com/JABvzla/react-native-runtime-monitor#readme"
 }
