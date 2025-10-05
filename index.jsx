@@ -12,7 +12,7 @@ import itemStorage from 'react-native-runtime-monitor/items-store';
 import 'react-native-runtime-monitor/network-interceptor';
 
 export const Monitor = itemStorage;
-export const NetworkMonitorScreen = () => {
+export const RuntimeMonitorScreen = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
   const handlePress = () => {
