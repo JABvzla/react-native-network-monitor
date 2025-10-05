@@ -42,7 +42,7 @@ export const NetworkListItemClosed = (item) => {
         <Text
           style={{ color: '#555', fontSize: scale(12), marginLeft: 'auto' }}
         >
-          {!isNaN(time) && Number(time).toFixed(0)}ms
+          {Number(time).toFixed(0)}ms
         </Text>
         <Text style={{ color: '#555', fontSize: scale(12) }}>{date}</Text>
       </View>

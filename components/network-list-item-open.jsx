@@ -10,6 +10,7 @@ export const NetworkListItemOpen = (item) => {
     { label: 'RESPONSE', value: response },
     { label: 'CURL', value: curl },
   ];
+  const sharedContentWithValues = sharedContent.filter(({ value }) => Boolean(value));
 
   return (
     <View
@@ -20,7 +21,7 @@ export const NetworkListItemOpen = (item) => {
         gap: scale(8),
       }}
     >
-      {sharedContent.map(({ label, value }, index) => (
+      {sharedContentWithValues.map(({ label, value }, index) => (
         <ToggleButton
           key={`${item.label}-${index}`}
           closed={

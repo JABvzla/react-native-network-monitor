@@ -25,6 +25,7 @@ XMLHttpRequest.prototype.send = function (body) {
       const reader = new FileReader();
       reader.onload = () => {
         itemStorage.addItem({
+          type: 'network',
           method: this._method,
           status: this.status,
           url: this._url,
@@ -45,6 +46,7 @@ XMLHttpRequest.prototype.send = function (body) {
     }
 
     itemStorage.addItem({
+      type: 'network',
       method: this._method,
       status: this.status,
       url: this._url,

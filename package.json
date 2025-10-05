@@ -1,6 +1,6 @@
 {
-    "version": "0.0.5",
-    "main": "index.js",
+    "version": "0.0.6",
+    "main": "index.jsx",
     "name": "react-native-runtime-monitor",
     "description": "react-native runtime monitor",
     "scripts": {},
