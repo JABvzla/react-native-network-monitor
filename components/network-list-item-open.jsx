@@ -20,9 +20,9 @@ export const NetworkListItemOpen = (item) => {
         gap: scale(8),
       }}
     >
-      {sharedContent.map(({ label, value }) => (
+      {sharedContent.map(({ label, value }, index) => (
         <ToggleButton
-          key={item.label}
+          key={`${item.label}-${index}`}
           closed={
             <Text style={{ fontSize: scale(12), fontWeight: 'bold' }}>
               {label}

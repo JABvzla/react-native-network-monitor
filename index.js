@@ -3,20 +3,43 @@ import {
   FlatList,
   SafeAreaView,
   StyleSheet,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
 import { NetworkListItem } from './components/network-list-item';
 import itemStorage from './items-store';
 import './network-interceptor';
+import { scale } from './utils';
+
+const SearchBar = ({ onChangeText, value }) => {
+  return (
+    <View style={{ padding: scale(10), backgroundColor: '#fcfcfc' }}>
+      <TextInput
+        onChangeText={onChangeText}
+        value={value}
+        placeholder="Filter by URL"
+        style={{
+          borderWidth: 1,
+          borderColor: '#ccc',
+          borderRadius: 10,
+          padding: 10,
+        }}
+      />
+    </View>
+  );
+};
 
 export const NetworkMonitorScreen = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [search, setSearch] = useState('');
   const handlePress = () => {
     setIsOpen((prev) => !prev);
   };
   const items = itemStorage.getItems();
+  const filteredItems = items.filter((item) =>
+    String(item.url).toLowerCase().includes(search.toLowerCase()),
+  );
 
   return (
     <>
@@ -24,7 +47,11 @@ export const NetworkMonitorScreen = () => {
         <View style={styles.container}>
           <SafeAreaView />
           <FlatList
-            data={items}
+            stickyHeaderIndices={[0]}
+            ListHeaderComponent={
+              <SearchBar value={search} onChangeText={setSearch} />
+            }
+            data={filteredItems}
             renderItem={(item) => <NetworkListItem {...item.item} />}
           />
         </View>
