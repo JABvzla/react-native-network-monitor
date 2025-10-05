@@ -6,7 +6,7 @@ import { ToggleButton } from './toggle-button';
 export const NetworkListItemOpen = (item) => {
   const { request, response, curl } = item;
   const sharedContent = [
-    { label: 'REQUEST', value: request },
+    { label: 'REQUEST BODY', value: request },
     { label: 'RESPONSE', value: response },
     { label: 'CURL', value: curl },
   ];
@@ -14,12 +14,10 @@ export const NetworkListItemOpen = (item) => {
   return (
     <View
       style={{
-        paddingTop: scale(5),
-        paddingBottom: scale(10),
+        paddingVertical: scale(8),
         paddingHorizontal: scale(20),
-        marginBottom: scale(20),
-        backgroundColor: '#eee',
-        gap: scale(5),
+        backgroundColor: '#eee5',
+        gap: scale(8),
       }}
     >
       {sharedContent.map(({ label, value }) => (

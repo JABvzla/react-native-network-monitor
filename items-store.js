@@ -13,10 +13,11 @@ class ItemStorage {
     return this._instance;
   }
   addItem(item) {
-    this.items.push({
+    const newItem = {
       id: getRandomId(),
       ...item,
-    });
+    };
+    this.items = [newItem, ...this.items];
   }
 
   getItems() {

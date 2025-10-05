@@ -14,7 +14,11 @@ export const NetworkListItemClosed = (item) => {
           paddingVertical: 10,
           color: '#222',
           textAlign: 'left',
+          letterSpacing: scale(-0.5),
+          height: scale(55),
         }}
+        numberOfLines={2}
+        ellipsizeMode="tail"
       >
         {url}
       </Text>
@@ -34,10 +38,11 @@ export const NetworkListItemClosed = (item) => {
           {method}
         </Text>
         <HttpStatusChip status={status} />
+
         <Text
           style={{ color: '#555', fontSize: scale(12), marginLeft: 'auto' }}
         >
-          {time}ms
+          {!isNaN(time) && Number(time).toFixed(0)}ms
         </Text>
         <Text style={{ color: '#555', fontSize: scale(12) }}>{date}</Text>
       </View>

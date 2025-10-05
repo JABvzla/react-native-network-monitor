@@ -16,6 +16,7 @@ export const NetworkMonitorScreen = () => {
   const handlePress = () => {
     setIsOpen((prev) => !prev);
   };
+  const items = itemStorage.getItems();
 
   return (
     <>
@@ -23,8 +24,7 @@ export const NetworkMonitorScreen = () => {
         <View style={styles.container}>
           <SafeAreaView />
           <FlatList
-            data={itemStorage.getItems()}
-            keyExtractor={(item) => item.id}
+            data={items}
             renderItem={(item) => <NetworkListItem {...item.item} />}
           />
         </View>
@@ -40,13 +40,10 @@ export const NetworkMonitorScreen = () => {
   );
 };
 
-const BUTTON_LEFT_POSITION = -25;
-const BUTTON_BOTTOM_POSITION = 100;
-
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    backgroundColor: '#fff',
+    backgroundColor: '#fcfcfc',
     width: '100%',
     height: '100%',
   },
@@ -55,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     width: 50,
     height: 50,
-    bottom: BUTTON_BOTTOM_POSITION,
-    right: BUTTON_LEFT_POSITION,
+    bottom: 100,
+    right: -25,
   },
 });
