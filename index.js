@@ -45,7 +45,7 @@ export const NetworkMonitorScreen = () => {
     <>
       {isOpen && (
         <View style={styles.container}>
-          <SafeAreaView />
+          <SafeAreaView style={{ flex: 1, paddingTop: 80 }}>
           <FlatList
             stickyHeaderIndices={[0]}
             ListHeaderComponent={
@@ -53,7 +53,8 @@ export const NetworkMonitorScreen = () => {
             }
             data={filteredItems}
             renderItem={(item) => <NetworkListItem {...item.item} />}
-          />
+            />
+          </SafeAreaView>
         </View>
       )}
       <TouchableOpacity
